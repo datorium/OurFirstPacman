@@ -41,7 +41,7 @@
             // Hero
             // 
             this.Hero.BackColor = System.Drawing.Color.Yellow;
-            this.Hero.Location = new System.Drawing.Point(95, 56);
+            this.Hero.Location = new System.Drawing.Point(435, 202);
             this.Hero.Name = "Hero";
             this.Hero.Size = new System.Drawing.Size(81, 80);
             this.Hero.TabIndex = 1;

@@ -50,6 +50,28 @@ namespace OurFirstPacman
         {
             Hero.Left += horVelocity;
             Hero.Top += verVelocity;
+            HeroBorderCollision();
         }
+
+        private void HeroBorderCollision()
+        {
+            if(Hero.Left + Hero.Width < 0)
+            {
+                Hero.Left = ClientRectangle.Width;
+            }
+            if(Hero.Left > ClientRectangle.Width)
+            {
+                Hero.Left = 0 - Hero.Width;
+            }
+            if(Hero.Top + Hero.Height < 0)
+            {
+                Hero.Top = ClientRectangle.Height;
+            }
+            if(Hero.Top > ClientRectangle.Height)
+            {
+                Hero.Top = 0 - Hero.Height;
+            }
+        }
+
     }
 }
