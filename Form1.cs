@@ -12,29 +12,44 @@ namespace OurFirstPacman
 {
     public partial class Form1 : Form
     {
+        private int step = 2;
+        private int horVelocity = 0;
+        private int verVelocity = 0;
+
         public Form1()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.A)
             {
-                Hero.Left -= 5;
+                horVelocity = -step;
+                verVelocity = 0;
             }
             else if(e.KeyCode == Keys.D)
             {
-                Hero.Left += 5;
+                horVelocity = step;
+                verVelocity = 0;
             }
             else if(e.KeyCode == Keys.W)
             {
-                Hero.Top -= 5;
+                horVelocity = 0;
+                verVelocity = -step;
             }
             else if(e.KeyCode == Keys.S)
             {
-                Hero.Top += 5;
+                horVelocity = 0;
+                verVelocity = step;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Hero.Left += horVelocity;
+            Hero.Top += verVelocity;
         }
     }
 }
