@@ -27,6 +27,14 @@ namespace OurFirstPacman
             {
                 Hero.Left += 5;
             }
+            else if(e.KeyCode == Keys.W)
+            {
+                Hero.Top -= 5;
+            }
+            else if(e.KeyCode == Keys.S)
+            {
+                Hero.Top += 5;
+            }
         }
     }
 }
