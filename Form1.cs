@@ -17,15 +17,16 @@ namespace OurFirstPacman
             InitializeComponent();
         }
 
-        private void ButtonStart_Click(object sender, EventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            //MessageBox.Show("Here we go!");
-            Hero.Visible = true;
-            Enemy.Visible = true;
-            Food.Visible = true;
-            ButtonStart.Visible = false;
-            Hero.Top = 200;
-            Hero.Left = 150;
+            if(e.KeyCode == Keys.A)
+            {
+                Hero.Left -= 5;
+            }
+            else if(e.KeyCode == Keys.D)
+            {
+                Hero.Left += 5;
+            }
         }
     }
 }
