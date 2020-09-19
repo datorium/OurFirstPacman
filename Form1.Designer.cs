@@ -33,6 +33,7 @@
             this.Enemy = new System.Windows.Forms.PictureBox();
             this.Food = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ButtonStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Hero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Food)).BeginInit();
@@ -41,11 +42,12 @@
             // Hero
             // 
             this.Hero.BackColor = System.Drawing.Color.Yellow;
-            this.Hero.Location = new System.Drawing.Point(435, 202);
+            this.Hero.Location = new System.Drawing.Point(74, 56);
             this.Hero.Name = "Hero";
             this.Hero.Size = new System.Drawing.Size(81, 80);
             this.Hero.TabIndex = 1;
             this.Hero.TabStop = false;
+            this.Hero.Visible = false;
             // 
             // Enemy
             // 
@@ -55,6 +57,7 @@
             this.Enemy.Size = new System.Drawing.Size(81, 80);
             this.Enemy.TabIndex = 2;
             this.Enemy.TabStop = false;
+            this.Enemy.Visible = false;
             // 
             // Food
             // 
@@ -64,17 +67,32 @@
             this.Food.Size = new System.Drawing.Size(81, 80);
             this.Food.TabIndex = 3;
             this.Food.TabStop = false;
+            this.Food.Visible = false;
             // 
             // timer1
             // 
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // ButtonStart
+            // 
+            this.ButtonStart.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ButtonStart.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonStart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ButtonStart.Location = new System.Drawing.Point(158, 191);
+            this.ButtonStart.Name = "ButtonStart";
+            this.ButtonStart.Size = new System.Drawing.Size(273, 139);
+            this.ButtonStart.TabIndex = 4;
+            this.ButtonStart.Text = "Start Game";
+            this.ButtonStart.UseVisualStyleBackColor = false;
+            this.ButtonStart.Click += new System.EventHandler(this.ButtonStart_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 478);
+            this.Controls.Add(this.ButtonStart);
             this.Controls.Add(this.Food);
             this.Controls.Add(this.Enemy);
             this.Controls.Add(this.Hero);
@@ -93,6 +111,7 @@
         private System.Windows.Forms.PictureBox Enemy;
         private System.Windows.Forms.PictureBox Food;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button ButtonStart;
     }
 }
 

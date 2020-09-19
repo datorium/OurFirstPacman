@@ -51,6 +51,7 @@ namespace OurFirstPacman
             Hero.Left += horVelocity;
             Hero.Top += verVelocity;
             HeroBorderCollision();
+            HeroEnemyCollision();
         }
 
         private void HeroBorderCollision()
@@ -73,5 +74,23 @@ namespace OurFirstPacman
             }
         }
 
+        private void HeroEnemyCollision()
+        {
+            if (Hero.Bounds.IntersectsWith(Enemy.Bounds))
+            {
+                timer1.Stop();
+                MessageBox.Show("Game Over!");
+            }
+        }
+
+        private void ButtonStart_Click(object sender, EventArgs e)
+        {
+            Hero.Visible = true;
+            Enemy.Visible = true;
+            Food.Visible = true;
+
+            ButtonStart.Visible = false;
+            this.Focus();
+        }
     }
 }
