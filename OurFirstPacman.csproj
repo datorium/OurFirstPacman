@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,147 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_left_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_right_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_right_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_up_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_up_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_down_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_down_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_down_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_down_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_left_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_left_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_left_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_left_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_melt_14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_right_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_right_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_right_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_right_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_up_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_up_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_up_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_up_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score_200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score_400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score_800.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score_1600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_down_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_down_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enemy_left_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

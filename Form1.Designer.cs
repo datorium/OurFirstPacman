@@ -34,6 +34,7 @@
             this.Food = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ButtonStart = new System.Windows.Forms.Button();
+            this.timerHero = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Hero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Food)).BeginInit();
@@ -44,14 +45,14 @@
             this.Hero.BackColor = System.Drawing.Color.Yellow;
             this.Hero.Location = new System.Drawing.Point(74, 56);
             this.Hero.Name = "Hero";
-            this.Hero.Size = new System.Drawing.Size(81, 80);
+            this.Hero.Size = new System.Drawing.Size(80, 80);
             this.Hero.TabIndex = 1;
             this.Hero.TabStop = false;
             this.Hero.Visible = false;
             // 
             // Enemy
             // 
-            this.Enemy.BackColor = System.Drawing.Color.Blue;
+            this.Enemy.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Enemy.Location = new System.Drawing.Point(238, 56);
             this.Enemy.Name = "Enemy";
             this.Enemy.Size = new System.Drawing.Size(81, 80);
@@ -87,6 +88,10 @@
             this.ButtonStart.UseVisualStyleBackColor = false;
             this.ButtonStart.Click += new System.EventHandler(this.ButtonStart_Click);
             // 
+            // timerHero
+            // 
+            this.timerHero.Tick += new System.EventHandler(this.timerHero_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,6 +117,7 @@
         private System.Windows.Forms.PictureBox Food;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button ButtonStart;
+        private System.Windows.Forms.Timer timerHero;
     }
 }
 
