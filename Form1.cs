@@ -95,6 +95,8 @@ namespace OurFirstPacman
         }
 
         private void MoveEnemy()
+        //created by Stacho Tecza
+        //2020
         {
             Enemy.Left += enemyHorVelocity;
             Enemy.Top += enemyVerVelocity;
@@ -140,8 +142,10 @@ namespace OurFirstPacman
                 Enemy.Top = 0 - Enemy.Height;
             }
         }
-
+        
         private void HeroFoodCollision()
+        //created by Stacho Tecza
+        //2020
         {
             string foodName;
             if (Hero.Bounds.IntersectsWith(Food.Bounds))
@@ -171,8 +175,10 @@ namespace OurFirstPacman
         }
 
         private void HeroBorderCollision()
+        //created by Stacho Tecza
+        //2020
         {
-            if(Hero.Left + Hero.Width < 0)
+            if (Hero.Left + Hero.Width < 0)
             {
                 Hero.Left = ClientRectangle.Width;
             }
