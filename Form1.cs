@@ -90,6 +90,15 @@ namespace OurFirstPacman
                 foodName = "food_" + foodImageCount;
                 Food.Image = (Image)Properties.Resources.ResourceManager.GetObject(foodName);
 
+                if(foodImageCount == 4)
+                {
+                    heroIsPredator = true;
+                }
+                else
+                {
+                    heroIsPredator = false;
+                }
+
                 foodImageCount++;
                 if(foodImageCount > 4)
                 {
@@ -135,7 +144,6 @@ namespace OurFirstPacman
                 }
             }
         }
-
         private void GameOver()
         {
             timer1.Stop();

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ghost-chase.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -220,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\enemy_left_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ghost-chase.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

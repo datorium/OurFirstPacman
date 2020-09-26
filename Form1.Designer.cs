@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.Hero = new System.Windows.Forms.PictureBox();
             this.Enemy = new System.Windows.Forms.PictureBox();
             this.Food = new System.Windows.Forms.PictureBox();
@@ -36,15 +37,19 @@
             this.ButtonStart = new System.Windows.Forms.Button();
             this.timerHero = new System.Windows.Forms.Timer(this.components);
             this.ScoreLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Hero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Food)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Hero
             // 
             this.Hero.BackColor = System.Drawing.Color.Yellow;
-            this.Hero.Location = new System.Drawing.Point(74, 56);
+            this.Hero.Location = new System.Drawing.Point(113, 68);
             this.Hero.Name = "Hero";
             this.Hero.Size = new System.Drawing.Size(80, 80);
             this.Hero.TabIndex = 1;
@@ -103,22 +108,47 @@
             this.ScoreLabel.TabIndex = 5;
             this.ScoreLabel.Text = "Score: 0";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox1.Location = new System.Drawing.Point(34, 357);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(410, 80);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox2.Location = new System.Drawing.Point(542, 215);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 222);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(611, 478);
+            this.ClientSize = new System.Drawing.Size(649, 525);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.ButtonStart);
             this.Controls.Add(this.Food);
             this.Controls.Add(this.Enemy);
             this.Controls.Add(this.Hero);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Datorium Pacman Version";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.Hero)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Food)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +162,8 @@
         private System.Windows.Forms.Button ButtonStart;
         private System.Windows.Forms.Timer timerHero;
         private System.Windows.Forms.Label ScoreLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
