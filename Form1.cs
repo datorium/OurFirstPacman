@@ -12,12 +12,19 @@ namespace OurFirstPacman
 {
     public partial class Form1 : Form
     {
+        private int score = 0;
         private int step = 2;
-        private int horVelocity = 0;
-        private int verVelocity = 0;
+        private int horHeroVelocity = 0;
+        private int verHeroVelocity = 0;
+
+        private int enemyHorVelocity = 0;
+        private int enemyVerVelocity = 0;
+
         private string heroDirection = "right";
         private int heroImageCount = 1;
         private int foodImageCount = 1;
+
+        private bool heroIsPredator = false;
 
         Random rand = new Random();
 
@@ -33,41 +40,41 @@ namespace OurFirstPacman
 
             Food.BackColor = Color.Transparent;
             Food.SizeMode = PictureBoxSizeMode.StretchImage;
-            Food.Image = (Image)Properties.Resources.ResourceManager.GetObject("food_3");
+            Food.Image = (Image)Properties.Resources.ResourceManager.GetObject("food_1");
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.A)
             {
-                horVelocity = -step;
-                verVelocity = 0;
+                horHeroVelocity = -step;
+                verHeroVelocity = 0;
                 heroDirection = "left";
             }
             else if(e.KeyCode == Keys.D)
             {
-                horVelocity = step;
-                verVelocity = 0;
+                horHeroVelocity = step;
+                verHeroVelocity = 0;
                 heroDirection = "right";
             }
             else if(e.KeyCode == Keys.W)
             {
-                horVelocity = 0;
-                verVelocity = -step;
+                horHeroVelocity = 0;
+                verHeroVelocity = -step;
                 heroDirection = "up";
             }
             else if(e.KeyCode == Keys.S)
             {
-                horVelocity = 0;
-                verVelocity = step;
+                horHeroVelocity = 0;
+                verHeroVelocity = step;
                 heroDirection = "down";
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Hero.Left += horVelocity;
-            Hero.Top += verVelocity;
+            Hero.Left += horHeroVelocity;
+            Hero.Top += verHeroVelocity;
             HeroBorderCollision();
             HeroEnemyCollision();
             HeroFoodCollision();
@@ -88,6 +95,8 @@ namespace OurFirstPacman
                 {
                     foodImageCount = 1;
                 }
+
+                UpdateScore(100);
             }
         }
 
@@ -115,10 +124,30 @@ namespace OurFirstPacman
         {
             if (Hero.Bounds.IntersectsWith(Enemy.Bounds))
             {
-                timer1.Stop();
-                MessageBox.Show("Game Over!");
+                if (heroIsPredator)
+                {
+                    Enemy.Dispose();
+                    UpdateScore(500);
+                }
+                else
+                {
+                    GameOver();
+                }
             }
         }
+
+        private void GameOver()
+        {
+            timer1.Stop();
+            MessageBox.Show("Game Over!");
+        }
+
+        private void UpdateScore(int scoreChange)
+        {
+            score += scoreChange;
+            ScoreLabel.Text = "Score: " + score;
+        }
+
 
         private void ButtonStart_Click(object sender, EventArgs e)
         {

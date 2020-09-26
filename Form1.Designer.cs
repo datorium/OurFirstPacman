@@ -35,6 +35,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ButtonStart = new System.Windows.Forms.Button();
             this.timerHero = new System.Windows.Forms.Timer(this.components);
+            this.ScoreLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Hero)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Enemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Food)).BeginInit();
@@ -92,11 +93,22 @@
             // 
             this.timerHero.Tick += new System.EventHandler(this.timerHero_Tick);
             // 
+            // ScoreLabel
+            // 
+            this.ScoreLabel.AutoSize = true;
+            this.ScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScoreLabel.Location = new System.Drawing.Point(12, 9);
+            this.ScoreLabel.Name = "ScoreLabel";
+            this.ScoreLabel.Size = new System.Drawing.Size(120, 32);
+            this.ScoreLabel.TabIndex = 5;
+            this.ScoreLabel.Text = "Score: 0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 478);
+            this.Controls.Add(this.ScoreLabel);
             this.Controls.Add(this.ButtonStart);
             this.Controls.Add(this.Food);
             this.Controls.Add(this.Enemy);
@@ -108,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Enemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Food)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,6 +131,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button ButtonStart;
         private System.Windows.Forms.Timer timerHero;
+        private System.Windows.Forms.Label ScoreLabel;
     }
 }
 
